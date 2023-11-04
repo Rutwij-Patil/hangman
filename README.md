@@ -50,4 +50,4 @@ If you've ever wanted to contribute to open source, and a great cause, now is yo
 
 ## License
 
-This project is licensed under the MIT License
+This project is licensed under the [MIT License](https://github.com/Rutwij-Patil/hangman/blob/master/LICENSE)

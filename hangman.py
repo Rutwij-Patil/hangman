@@ -63,4 +63,36 @@ len = len(chosenWord)
 time.sleep(1.0)
 print("Chosen Word:", mask(chosenWord, recivedCharacters))
 time.sleep(1.0)
-print("Enter your guesses letter by lette
+print("Enter your guesses letter by letter")
+
+chances = 6
+while chances > 0:
+    a = input()
+    time.sleep(1.0)
+    if a in recivedCharacters:
+        print(a, "was previously guessed, try a different one")
+    else: 
+        recivedCharacters += a
+        
+    if all_characters_present(chosenWord, recivedCharacters):
+        print("Congratulations you've guessed the word " + chosenWord)
+        break
+    elif a in chosenWord :
+        print(mask(chosenWord, recivedCharacters))
+    else:
+        chances -= 1
+        print(mask(chosenWord, recivedCharacters))
+        if chances > 0:
+            print("wrong guess, chances remaining: ", chances)
+        if chances == 0:
+            print("Failed!, re-execute to Try again.")
+            break
+    
+        
+        
+        
+    
+                    
+
+
+
